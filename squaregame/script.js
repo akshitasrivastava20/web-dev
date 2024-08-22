@@ -31,5 +31,30 @@ y.addEventListener("mouseleave",function(){
 })
 
 let z= document.getElementById("three");
-let q= document.getElementById("four");
+z.addEventListener("mouseenter",function(){
+  let a=Math.floor(Math.random()*256);
+  let b=Math.floor(Math.random()*256);
+  let c=Math.floor(Math.random()*256);
+  z.style.backgroundColor=`rgb(${a},${b},${c})`
 
+})
+z.addEventListener("mouseleave",function(){
+  z.style.backgroundColor="white";
+})
+let q= document.getElementById("four");
+    q.addEventListener("mouseenter",function(){
+      let a=Math.floor(Math.random()*256);
+      let b=Math.floor(Math.random()*256);
+      let c=Math.floor(Math.random()*256);
+      
+      x.style.backgroundColor=`rgb(${a},0,0)`
+      y.style.backgroundColor=`rgb(0,${b},0)`
+      z.style.backgroundColor=`rgb(0,0,${c})`
+
+    })
+    q.addEventListener("mouseleave",function(){
+      q.style.backgroundColor="white";
+      x.style.backgroundColor="white";
+      y.style.backgroundColor="white";
+      z.style.backgroundColor="white";
+    })
